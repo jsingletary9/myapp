@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/stylesheet.css"> 
+    <title>Home Page</title>
+</head>
+<body>
+    <main>
+        <h1>orders</h1>
+        <table>
+            <thead>
+                <th>Sale ID</th>
+                <th>Date</th>
+                <th>Entree Type</th>
+                <th>Protein</th>
+                <th>Chips and Salsa</th>
+                <th>Chips and Queso</th>
+                <th>Chips and Guac</th>
+                <th>Drink </th>
+                <th>Cost</th>
+            </thead>
+            <tbody>
+                <% for (var i in orders) {%>
+                    <tr>
+                        <td><%=orders[i].sale_id%></td>
+                        <td><%=orders[i].date%></td>
+                        <td><%=orders[i].entree_type%></td>
+                        <td><%=orders[i].protein%></td>
+                        <td><%=orders[i].chips_and_salsa%></td>
+                        <td><%=orders[i].chips_and_queso%></td>
+                        <td><%=orders[i].chips_and_guac%></td>
+                        <td><%=orders[i].drink%></td>
+                        <td><%=orders[i].cost%></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </main>
+</body>
